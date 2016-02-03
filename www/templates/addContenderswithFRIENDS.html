@@ -1,0 +1,23 @@
+<ion-view title="Add Contenders (w/ FRIENDS)">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <form class="list">
+            <label class="item item-input">
+                <span class="input-label">Contenders</span>
+                <input ng-model="contender_name" placeholder="Type Your Name" type="text" >
+
+                <button type="submit" class="button" style="position: absolute; left: -9999px; width: 1px; height: 1px;" ng-click="addContender(contender_name)">
+                Login</button>
+            </label>
+        </form>
+        <div class="list card">
+            <div class="item item-body">
+                <ion-list ng-repeat="contender in contendersList">
+                    <ion-item>{{ contender }}</ion-item>
+                    
+                </ion-list>
+            </div>
+        </div>
+        <a href="#/withfriends/counter" class="button button-stable button-block ">Start</a>
+        <a href="#/dash" class="button button-assertive button-block ">Forget it!</a>
+    </ion-content>
+</ion-view>
